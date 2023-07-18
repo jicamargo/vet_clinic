@@ -2,7 +2,7 @@
 
 <div align="center">
   <br/>
-  <h1 style="color: green" fontsize=30px>VET CLINIC</h1>
+  <h1 style="color: green">VET CLINIC</h1>
   <br/>
 </div>
 
