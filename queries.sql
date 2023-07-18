@@ -26,7 +26,7 @@ SELECT * FROM animals
 
 /* PROJECT 2: NEW QUERIES USING TRANSACTIONS, AGGREGATE FUNCTIONS */ 
 
-/* 1 PLAYING WITH TRANSACTIONS */
+/* 3.1 PLAYING WITH TRANSACTIONS */
 BEGIN;
 
 -- Update the species column to "unspecified"
@@ -41,7 +41,7 @@ ROLLBACK;
 -- Verify that the species column has reverted to its previous state
 SELECT * FROM animals;
 
-/* 2 PLAYING WITH TRANSACTIONS */
+/* 3.2 PLAYING WITH TRANSACTIONS */
 
 BEGIN;
 
@@ -59,7 +59,7 @@ COMMIT;
 -- Verify that changes persist after commit
 SELECT * FROM animals;
 
-/* 3 PLAYING WITH TRANSACTIONS */
+/* 3.3 PLAYING WITH TRANSACTIONS */
 
 BEGIN;
 
@@ -74,7 +74,7 @@ ROLLBACK;
 -- Verify that all records are restored after the rollback
 SELECT * FROM animals;
 
-/* 4 PLAYING WITH TRANSACTIONS */
+/* 3.4 PLAYING WITH TRANSACTIONS */
 
 BEGIN;
 
@@ -99,38 +99,38 @@ COMMIT;
 -- Verify that changes persist after commit
 SELECT * FROM animals;
 
-/* 5 QUERIES */
+/* 4 QUERIES */
 
--- 5.1 How many animals are there?
+-- 4.1 How many animals are there?
 
 SELECT COUNT(*) AS total_animals FROM animals;
 
---5.2 How many animals have never tried to escape?
+--4.2 How many animals have never tried to escape?
 
 SELECT COUNT(*) AS no_escape_animals FROM animals WHERE escape_attempts = 0;
 
---5.3 What is the average weight of animals?
+--4.3 What is the average weight of animals?
 
 SELECT AVG(weight_kg) AS average_weight FROM animals;
 
---5.4 Who escapes the most, neutered or not neutered animals?
+--4.4 Who escapes the most, neutered or not neutered animals?
 
 SELECT neutered, SUM(escape_attempts) AS total_escape_attempts
-FROM animals
-GROUP BY neutered
-ORDER BY total_escape_attempts DESC
-LIMIT 1;
+  FROM animals
+  GROUP BY neutered
+  ORDER BY total_escape_attempts DESC
+  LIMIT 1;
 
---5.5 What is the minimum and maximum weight of each type of animal?
+--4.5 What is the minimum and maximum weight of each type of animal?
 
 SELECT species, MIN(weight_kg) AS min_weight, MAX(weight_kg) AS max_weight
-FROM animals
-GROUP BY species;
+  FROM animals
+  GROUP BY species;
 
---5.6 What is the average number of escape attempts per animal type of those born between 1990 and 2000?
+--4.6 What is the average number of escape attempts per animal type of those born between 1990 and 2000?
 
 SELECT species, AVG(escape_attempts) AS average_escape_attempts
-FROM animals
-WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31'
-GROUP BY species;
+  FROM animals
+  WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31'
+  GROUP BY species;
 
