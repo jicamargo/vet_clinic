@@ -7,3 +7,6 @@ CREATE TABLE animals (
   weight_kg DECIMAL(10, 2)
 );
 
+/* project 2: add a new column: species */
+
+ALTER TABLE animals ADD COLUMN species VARCHAR(255);
