@@ -2,9 +2,11 @@
 
 <div align="center">
   <br/>
-  <h1>VET CLINIC</h1>
+  <h1 style="color: green" fontsize=30px>VET CLINIC</h1>
   <br/>
 </div>
+
+<!-- TABLE OF CONTENTS -->
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
