@@ -1,43 +1,4 @@
-# curriculum-databases-projects-template
-
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
-
-
-## Getting Started
-
-This repository includes files with plain SQL that can be used to recreate a database:
-
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
-
 <a name="readme-top"></a>
-
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
-
-<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
@@ -51,43 +12,22 @@ After you're finished please remove all the comments and instructions!
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [VET CLINIC] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
+"vet_clinic" project is a PostgreSQL database designed to facilitate the management of a veterinary clinic, providing storage and organization of data related to animals, animals's owners, clicnic employees, and more.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
 
 <details>
 <summary>Database</summary>
@@ -100,11 +40,11 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+- **[Advanced Search and Filtering:]** The ability to search for animals based on various criteria, such as name, birthdate, neutered status, escape attempts, and weight. This allows clinic staff to quickly find and manage specific animals based on specific requirements.
+- **[Reporting and Analytics:]** The capability to generate reports and extract valuable insights from the data. For example, analyzing the number of escape attempts and neutering rates can help identify patterns and inform decision-making processes within the clinic.
+- **[Data Management and Organization:]** Efficiently manage and organize animal-related data, including medical records, appointments, and more. This feature enables smooth operation and ensures the availability of essential information when needed, promoting effective veterinary care and administration.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -112,93 +52,62 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](<replace-with-your-deployment-URL>)
+- Cooming soon 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
-
 ### Prerequisites
 
 In order to run this project you need:
 
-<!--
-Example command:
+1. Install PostgreSQL:
 
-```sh
- gem install rails
-```
- -->
+   - Ensure that PostgreSQL is installed locally on your system. You can download and install the latest version of PostgreSQL from the official PostgreSQL website (https://www.postgresql.org).
 
+2. Create the Database:
+   - Once PostgreSQL is installed, open a PostgreSQL client tool or connect to the PostgreSQL server via the command line.
+   - Create a new database called "vet_clinic" by executing the following SQL command:
+     ```
+     CREATE DATABASE vet_clinic;
+     ```
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
-
 ### Install
 
-Install this project with:
+Run the Provided Files:
+   - In this repository, you will find several files to set up the vet_clinic database:
+     - schema.sql: This file contains the SQL script to create the necessary tables and define the database schema.
+     - data.sql: This file contains the SQL script to insert sample records into the tables.
+     - queries.sql: This file contains example SQL queries for performing operations on the database.
+   - Run the following files in the provided order to set up the database:
+     - Execute the schema.sql file to create the required tables and define the schema:
+       ```
+       psql -U your_username -d vet_clinic -f schema.sql
+       ```
+     - Execute the data.sql file to populate the tables with sample data:
+       ```
+       psql -U your_username -d vet_clinic -f data.sql
+       ```
+     - You can now execute the queries in the queries.sql file to interact with the database and retrieve information:
+       ```
+       psql -U your_username -d vet_clinic -f queries.sql
+       ```
+  Note: Replace "your_username" in the commands with your actual PostgreSQL username.
 
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
+  By following these steps, you will have the vet_clinic database set up locally with the necessary tables and sample data, allowing you to start exploring and utilizing the functionality of the application.
 
 ### Usage
 
-To run the project, execute the following command:
+Start Exploring:
+   - With the database and sample data set up, you are now ready to explore the vet_clinic database.
+   - Use a PostgreSQL client tool or the command line to connect to the "vet_clinic" database and interact with the tables and data.
+   - Refer to the provided schema and queries to understand the structure of the database and to perform various operations and queries on the data.
 
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,19 +115,10 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **JIC Software (Jorge Camargo)**
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@jicamargo](https://github.com/jicamargo)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jorgecamargog/?locale=en_US)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -228,9 +128,10 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[User Interface (UI) Enhancements]:**
+  Develop a user-friendly and intuitive front-end interface using a modern web framework like React or Vue.js. This would provide a responsive and interactive user experience for accessing and managing the veterinary clinic data.
+- [ ] **[Appointment Scheduling and Notifications]:**
+  Implement a feature for appointment scheduling, allowing clinic staff to book appointments for animals and send   notifications to clients. This could include features such as calendar integration, reminders, and email or SMS notifications to help streamline the appointment management process.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -248,9 +149,21 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
+If you like this vet_clinic project and believe in the importance of efficient and organized management for veterinary clinics, we encourage you to show your support. By supporting this project, you contribute to the development of a valuable tool that can make a real difference in the lives of animals and the veterinary professionals who care for them.
 
-If you like this project...
+Your support can take many forms:
+
+1. Give a Star: If you find this project useful or interesting, give it a star to show your support. This helps raise awareness of the project and can help it reach a wider audience.
+
+2. Spread the Word: Share information about this project with your friends, colleagues, and social networks. Help us reach a wider audience who can benefit from this solution.
+
+3. Provide Feedback: Your feedback is invaluable in shaping the project and ensuring it meets the needs of veterinary clinics effectively. Share your thoughts, suggestions, and ideas for improvement. Your input can guide future development efforts.
+
+4. Sponsorship or Donations: If you or your organization are in a position to support the project financially, consider sponsoring the development efforts or making a donation. Your contribution can help cover hosting costs, support ongoing maintenance, and enable further enhancements.
+
+By supporting this project, you contribute to the advancement of veterinary care and improve the efficiency of veterinary clinics. Together, we can make a positive impact on the lives of animals and the professionals dedicated to their well-being.
+
+Thank you for your support, and let's work together to create a brighter future for veterinary clinics everywhere.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -258,25 +171,7 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
+I would like to thank to Microverse and all the peers and mentors for their support and encouragement.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -286,6 +181,5 @@ I would like to thank...
 
 This project is [MIT](./LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
