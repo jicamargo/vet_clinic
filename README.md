@@ -1,5 +1,10 @@
 <a name="readme-top"></a>
 
+<div align="center">
+  <br/>
+  <h1>VET CLINIC</h1>
+  <br/>
+</div>
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -21,9 +26,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [VET CLINIC] <a name="about-project"></a>
+# 📖 VET CLINIC <a name="about-project"></a>
 
-"vet_clinic" project is a PostgreSQL database designed to facilitate the management of a veterinary clinic, providing storage and organization of data related to animals, animals's owners, clicnic employees, and more.
+VET CLINIC is a project that uses a PostgreSQL database. It is designed to facilitate the management of a veterinary clinic, providing storage and organization of data related to animals, animals's owners, clicnic employees, and more.
 
 ## 🛠 Built With <a name="built-with"></a>
 
