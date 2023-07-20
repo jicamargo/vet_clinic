@@ -91,3 +91,116 @@ UPDATE animals
   WHERE name IN ('Angemon', 'Boarmon');
 
   
+/* project 4: */
+
+--insert data into vets */
+
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES ('William Tatcher', 45, '2000-04-23');
+
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES ('Maisy Smith', 26, '2019-01-17');
+
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES ('Stephanie Mendez', 64, '1981-05-04');
+
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES ('Jack Harkness', 38, '2008-06-08');
+
+-- Insert specialization for Vet William Tatcher (Pokemon)
+INSERT INTO specializations (vet_id, species_id)
+VALUES (1, 1);
+
+-- Insert specialization for Vet Stephanie Mendez (Digimon)
+INSERT INTO specializations (vet_id, species_id)
+VALUES (3, 2);
+
+-- Insert specialization for Vet Stephanie Mendez (Pokemon)
+INSERT INTO specializations (vet_id, species_id)
+VALUES (3, 1);
+
+-- Insert specialization for Vet Jack Harkness (Digimon)
+INSERT INTO specializations (vet_id, species_id)
+VALUES (4, 2);
+
+/***** insert visits *****/
+
+-- Insert visit for Agumon visiting Vet William Tatcher on May 24th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (1, 1, '2020-05-24');
+
+-- Insert visit for Agumon visiting Vet Stephanie Mendez on Jul 22th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (1, 3, '2020-07-22');
+
+-- Insert visit for Gabumon visiting Vet Jack Harkness on Feb 2nd, 2021.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (2, 4, '2021-02-02');
+
+-- Insert visit for Pikachu visiting Vet Maisy Smith on Jan 5th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (3, 2, '2020-01-05');
+
+-- Insert visit for Pikachu visiting Vet Maisy Smith on Mar 8th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (3, 2, '2020-03-08');
+
+-- Insert visit for Pikachu visiting Vet Maisy Smith on May 14th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (3, 2, '2020-05-14');
+
+-- Insert visit for Devimon visiting Vet Stephanie Mendez on May 4th, 2021.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (4, 3, '2021-05-04');
+
+-- Insert visit for Charmander visiting Vet Jack Harkness on Feb 24th, 2021.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (5, 4, '2021-02-24');
+
+-- Insert visit for Plantmon visiting Vet Maisy Smith on Dec 21st, 2019.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (6, 2, '2019-12-21');
+
+-- Insert visit for Plantmon visiting Vet William Tatcher on Aug 10th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (6, 1, '2020-08-10');
+
+-- Insert visit for Plantmon visiting Vet Maisy Smith on Apr 7th, 2021.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (6, 2, '2021-04-07');
+
+-- Insert visit for Squirtle visiting Vet Stephanie Mendez on Sep 29th, 2019.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (7, 3, '2019-09-29');
+
+-- Insert visit for Angemon visiting Vet Jack Harkness on Oct 3rd, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (8, 4, '2020-10-03');
+
+-- Insert visit for Angemon visiting Vet Jack Harkness on Nov 4th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (8, 4, '2020-11-04');
+
+-- Insert visit for Boarmon visiting Vet Maisy Smith on Jan 24th, 2019.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (9, 2, '2019-01-24');
+
+-- Insert visit for Boarmon visiting Vet Maisy Smith on May 15th, 2019.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (9, 2, '2019-05-15');
+
+-- Insert visit for Boarmon visiting Vet Maisy Smith on Feb 27th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (9, 2, '2020-02-27');
+
+-- Insert visit for Boarmon visiting Vet Maisy Smith on Aug 3rd, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (9, 2, '2020-08-03');
+
+-- Insert visit for Blossom visiting Vet Stephanie Mendez on May 24th, 2020.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (10, 3, '2020-05-24');
+
+-- Insert visit for Blossom visiting Vet William Tatcher on Jan 11th, 2021.
+INSERT INTO visits (animal_id, vet_id, visit_date)
+VALUES (10, 1, '2021-01-11');
